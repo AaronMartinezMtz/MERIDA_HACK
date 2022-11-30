@@ -1,0 +1,40 @@
+
+<h1 class="display-4 fw-bold lh-1 text-center">Instalaciones</h1>
+
+<table class="table table-striped table-hover align-middle ">
+    <thead>
+        <tr>
+          <th scope="col">Lider</th>
+          <th scope="col">Razon</th>
+          <th scope="col">Direccion</th>
+          <th scope="col">Fecha Inicial</th>
+          <th scope="col">Fecha Final</th>
+          <th scope="col">Dimesiones</th>
+          <th scope="col">Estado</th>
+          <th scope="col">Comentarios</th>
+        
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let data of instalaciones">
+            <td>{{data.leader.fullName}}</td>
+            <td>{{data.razon}}</td>
+            <th scope="row">{{data.direccion}}</th>
+            <td>{{data.fecha_inicial}}</td>
+            <td>{{data.fecha_final}}</td>
+            <td>{{data.dimensiones}}</td>
+            <td>{{data.estado}}</td>
+            <td>{{data.comentarios}}</td>
+        </tr>
+
+  </table>
+
+<button type="button" class="btn btn-danger position-fixed bottom-0 end-0 m-4" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Tooltip on left" (click)="registrar()" >
+  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+<path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+</svg>
+</button>
+
+

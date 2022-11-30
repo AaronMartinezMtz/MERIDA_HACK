@@ -1,0 +1,115 @@
+<nav class="navbar navbar-expand navbar-light bg-white fixed-top shadow-sm">
+    <div class="container-fluid">
+
+      <a class="d-lg-none" data-bs-toggle="offcanvas" href="#offcanvasExample" aria-controls="offcanvasExample">
+        <i class="fa-solid fa-bars"></i>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+       
+
+
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+         
+
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img 
+                style="border-radius: 100%;"
+                width="30"
+                height="30"
+                src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png" 
+                alt="User image">
+              {{ 'Cielo Hamacas' }}
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end shadow animate__animated  animate__flipInY" aria-labelledby="navbarDropdown">
+              <li ><button (click)="salir()" class="dropdown-item"><i class="fa-solid fa-arrow-right-from-bracket me-2"></i>Cerrar sesión</button></li>
+            </ul>
+          </li>
+
+        
+        </ul>
+        
+      </div>
+
+
+
+    </div>
+</nav>
+
+
+<main>
+
+  <router-outlet></router-outlet>
+  
+</main>
+
+
+
+<div class="offcanvas offcanvas-start sidebarNav bg-info text-obscurito" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header bg-primary">
+      <img class="image-logo" src="https://sistemab.org/bkp/wp-content/uploads/2018/12/Cielo-Hamacas-6.png" [alt]="'Logo'">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Panel Admin</h5>
+    </div>
+
+
+
+
+    <div class="offcanvas-body">
+      
+      <ul class="navbar-nav  sidebarList">
+
+        <li class="nav-item" routerLinkActive="active" >
+          <a class="nav-link " routerLink="/admin/sala-de-conferencias"><i class="fa-solid fa-camera me-3"></i>Videollamada</a>
+        </li>
+
+        <li class="nav-item" routerLinkActive="active" >
+          <a class="nav-link " routerLink="/admin/ubicacion"><i class="fa-solid fa-briefcase me-3"></i>Presencia</a>
+        </li>
+
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/admin/instalaciones"><i class="fa-solid fa-building me-3"></i>Ordenes de instalaciones</a>
+        </li>
+
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/admin/estadisticas"><i class="fa-solid fa-chart-pie me-3"></i>Estadisticas</a>
+        </li>
+
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/admin/estadisticas-lider"><i class="fa-solid fa-square-poll-vertical me-3"></i>Estadisticas de Lideres</a>
+        </li>
+
+
+
+        <hr>
+
+
+        
+      </ul>
+
+      
+      
+    </div>
+
+
+
+
+      <div class="container d-flex flex-column align-items-center my-3">
+        <a class="navbar-brand" href="#">
+          <img 
+          class="cancun"
+          src="https://www.cancun.tecnm.mx/wp-content/uploads/2017/09/LOGO-ITCANCUN-MARCA-REGISTRADA.png" alt="" width="30" height="24">
+        </a>
+        <span class="me-2" style="font-size: .8rem;">&copy; Instituto Tecnológico de Cancún</span>
+      </div>
+
+  </div>

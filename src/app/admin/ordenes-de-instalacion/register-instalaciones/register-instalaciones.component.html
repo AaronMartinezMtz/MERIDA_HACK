@@ -1,0 +1,73 @@
+<div class="centerForm">
+
+  
+    <div class="formsT p-5 pt-4 pb-4" diameter="10" >
+      <form class="mt-5" autocomplete="off"  [formGroup]="form">
+  
+      <h5 class="text-center">Nueva Instalacion</h5>
+  
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-labe text-center">razon</label>
+        <input type="text" class="form-control" formControlName="razon" id="exampleFormControlInput1" placeholder="Nuevo Titiulo">
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-labe text-center">Direccion</label>
+        <input type="text" class="form-control" formControlName="direccion" id="exampleFormControlInput1" placeholder="Nuevo Titiulo">
+      </div>
+  
+      <label for="exampleFormControlInput1" class="form-label text-center">Lider del proyecto</label>
+      <select class="form-select"  formControlName="ledearId" aria-label="Default select example">
+        <option *ngFor="let data of leaders " [value]="data.id" >{{data.fullName}}</option>
+      </select>
+
+      
+      <div class="container text-center">
+        <div class="row">
+  
+          <div class="col mb-3" >
+            <label for="exampleFormControlInput1" class="form-label text-center">Fecha de inicio</label>
+            <input type="date" class="form-control" formControlName="fecha_inicial" id="exampleFormControlInput1" >
+          </div>
+  
+          <div class="col mb-3">
+            <label for="exampleFormControlInput1" class="form-label text-center">Fecha de termino</label>
+            <input type="date" class="form-control" formControlName="fecha_final" id="exampleFormControlInput1" >
+          </div>
+          
+        </div>
+  
+  
+      </div>
+
+      <label for="exampleFormControlInput1" class="form-label text-center">Estado de la Instalacion</label>
+      <select class="form-select"  formControlName="estado" aria-label="Default select example">
+        <option *ngFor="let data of estados " [value]="data" >{{data}}</option>
+      </select>
+
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label text-center">dimensiones</label>
+        <textarea class="form-control" formControlName="dimensiones" id="exampleFormControlTextarea1" placeholder="Breve introducción" rows="3"></textarea>
+      </div>
+      
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label text-center">Comentarios</label>
+        <textarea class="form-control" formControlName="comentarios" id="exampleFormControlTextarea1" placeholder="Breve introducción" rows="3"></textarea>
+      </div>
+  
+    </form>
+  
+    </div>
+  
+  
+  
+  
+  </div>
+  
+  
+  <button type="button" class="btn btn-primary position-fixed bottom-0 end-0 m-4" data-bs-toggle="modal" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Tooltip on left" (click)="register()" >
+    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-send-check" viewBox="0 0 17 17">
+      <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855a.75.75 0 0 0-.124 1.329l4.995 3.178 1.531 2.406a.5.5 0 0 0 .844-.536L6.637 10.07l7.494-7.494-1.895 4.738a.5.5 0 1 0 .928.372l2.8-7Zm-2.54 1.183L5.93 9.363 1.591 6.602l11.833-4.733Z"/>
+      <path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686Z"/>
+    </svg>
+  </button>

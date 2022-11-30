@@ -1,0 +1,17 @@
+.centerForm{
+
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    
+
+}
+
+.formsT{
+    width: 100%;
+    max-width: 600px;
+    background-color: rgb(244, 244, 246);
+    border-radius: 5%;
+
+}

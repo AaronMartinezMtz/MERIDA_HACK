@@ -1,0 +1,36 @@
+<div class="container text-center">
+    <div class="col">
+      <div class="col">
+        
+        <h4>Numero de integrantes por Lider</h4>
+  
+          <div>
+            <div style="display: block">
+              <canvas baseChart
+                [data]="barChartData1"
+                [type]="barChartType1"
+                (chartHover)="chartHovered1($event)"
+                (chartClick)="chartClicked1($event)">
+              </canvas>
+            </div>
+          </div>
+        
+  
+  
+      </div>
+      <div class="col">
+        
+        <h4>Numero de lideres por estado/pais</h4>
+  
+            <div class="chart justify-content-center" style=" height:20vh; width:40vw">
+              <canvas baseChart
+                      [data]="pieChartData1"
+                      [type]="pieChartType1"
+                      [options]="pieChartOptions1">
+              </canvas>
+            </div>
+  
+      </div>
+    </div>
+  </div>
+  

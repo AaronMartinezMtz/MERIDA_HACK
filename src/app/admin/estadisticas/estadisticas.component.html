@@ -1,0 +1,79 @@
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+      
+      <h4>Instalaciones por ciudad/pais</h4>
+
+        <div>
+          <div style="display: block">
+            <canvas baseChart
+              [data]="barChartData1"
+              [type]="barChartType1"
+              (chartHover)="chartHovered1($event)"
+              (chartClick)="chartClicked1($event)">
+            </canvas>
+          </div>
+        </div>
+      
+
+
+    </div>
+    <div class="col">
+      
+      <h4>instalaciones exitosas y no exitosas</h4>
+
+          <div class="chart" style=" height:12vh; width:24vw">
+            <canvas baseChart
+                    [data]="pieChartData1"
+                    [type]="pieChartType1"
+                    [options]="pieChartOptions1">
+            </canvas>
+          </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="container text-center paddingT">
+  <div class="row">
+    <div class="col">
+      
+      <h4>Artesanos por Productos</h4>
+
+        <div>
+          <div style="display: block">
+            <canvas baseChart
+              [data]="barChartData"
+              [type]="barChartType"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)">
+            </canvas>
+          </div>
+        </div>
+      
+
+
+    </div>
+    <div class="col">
+      
+      <h4>Cantidad de productos</h4>
+
+          <div class="chart" style=" height:13vh; width:26vw">
+            <canvas baseChart
+                    [data]="pieChartData"
+                    [type]="pieChartType"
+                    [options]="pieChartOptions">
+            </canvas>
+          </div>
+
+    </div>
+  </div>
+</div>

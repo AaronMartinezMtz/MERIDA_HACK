@@ -1,0 +1,272 @@
+
+
+$primary: #b5e7f3;
+$secondary: #009ba9;
+$dark: #4d3579;
+$light: #F4F7FC;
+$danger: #ff3333;
+$info: #eff9eb;
+$link: #000000;
+
+$moradito: #ff0099;
+$azulito: #41a2e2;
+$oscurito: #3C4A73;
+
+$btn-border-radius: 2rem;
+
+$h6Color: #323f62;
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+.btn-primary, .btn-danger, .btn-secondary {
+    color: #fff;
+}  
+
+.bg-oscurito {
+    background-color: $oscurito !important;
+}
+
+.btn-primary:hover, 
+.btn-danger:hover, 
+.btn-outline-secondary:hover,
+.btn-outline-primary:hover   { 
+    color: #fff;
+}  
+
+
+.form-control, .form-select, .btn-sm{
+    border-radius: 2rem;
+}
+
+
+ul.sidebarList li a.nav-link {
+    color: $azulito !important;
+}
+ 
+ul.sidebarList li.active a, .active a{
+    color: $oscurito !important;
+}
+
+
+
+.bg-moradito {
+    background-color: $moradito !important;
+    color: white !important;
+}
+
+
+.bg-azulito {
+    background-color: $azulito !important;
+    color: white !important;
+}
+
+
+.active a{
+    color: $primary;
+}
+
+.dropdown-menu, .dropdown-divider {
+    border: none !important;
+}
+
+hr:not([size]) {
+    height: 0.5px;
+}
+
+
+/* You can add global styles to this file, and also import other style files */
+
+
+:root {
+    --offcanvas-width: 270px;
+    --navbar-height: 62px;
+}
+
+
+.sidebarNav {
+    width: var(--offcanvas-width) !important;
+}
+
+
+nav {
+    height: var(--navbar-height) !important;
+}
+
+main {
+    margin-top: var(--navbar-height);
+}
+
+@media (min-width: 992px) {
+    .offcanvas-backdrop{
+        display: none !important;
+    }
+    .sidebarNav {
+        transform: none !important;
+        visibility: visible !important;
+    }
+    main {
+        margin-left: var(--offcanvas-width);
+    }
+    nav {
+        margin-left: var(--offcanvas-width);
+    }
+}
+
+.offcanvas, .fixed-top  {
+    z-index: 1029 !important;
+}
+
+.offcanvas-backdrop{
+    z-index: 1028 !important;
+}
+
+
+
+h4 {
+    color: #000000;
+}
+
+
+
+.handCursor {
+    cursor: pointer;
+}
+
+
+
+
+.horarioLink {
+    text-decoration: none;
+}
+
+.horarioLink .fa-angle-down {
+    transition: all ease 0.25s;
+}
+
+.horarioLink[aria-expanded="true"] .fa-angle-down {
+    transform: rotate(180deg);
+}
+
+
+.pictureImage {
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+}
+
+.pictureImage:hover {
+    opacity: .5;
+}
+
+
+h6 {
+    color: $h6Color;
+    font-weight: bold;
+}
+
+
+
+.remove-border {
+    border: none !important;
+}
+
+
+
+
+/* SCROLL BAR */
+
+::-webkit-scrollbar {
+    width: 8px;     /* Tamaño del scroll en vertical */
+    height: 8px;    /* Tamaño del scroll en horizontal */
+    /* display: none;  Ocultar scroll */
+}
+
+
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del track */
+::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo cuando esté en active o hover */
+::-webkit-scrollbar-track:hover,
+::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}
+
+
+
+
+
+/* 
+*** LIBRERIA MULTISELECT
+*/
+.selected-list .c-btn {
+    border-radius: 20px;
+}
+  
+  
+.selected-list .c-list .c-token {
+    border-radius: 20px !important;
+}
+
+.selected-list .c-list .c-token,
+.pure-checkbox input[type="checkbox"]:checked + label:before {
+    background: #a483ea !important;
+}
+
+.pure-checkbox input[type="checkbox"] + label:before {
+    border: 1px solid #a483ea !important;
+}
+
+.single-select-mode .pure-checkbox input[type="checkbox"] + label:after{
+    border-color: #a483ea !important;
+}
+
+
+
+
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+img.image-logo {
+    width: 20%;
+}
+
+
+img.cancun {
+    height: 60px;
+    width: 40px;
+    object-fit: contain;
+}
+
+
+h5 {
+    font-size: 1.1rem;
+    margin-left: 10px;
+}
